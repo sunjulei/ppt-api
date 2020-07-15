@@ -1,0 +1,23 @@
+mydb:
+  dbname: pptdb
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pptdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: sjl0.0
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 500MB
+
+server:
+  port: 8181
+  servlet:
+    context-path: /pptapi
